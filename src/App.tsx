@@ -1,4 +1,4 @@
-﻿const STREAM_URL = 'http://localhost:8888'
+﻿const STREAM_URL = 'http://116.202.181.61'
 
 function App() {
   return (
