@@ -1,4 +1,4 @@
-﻿const STREAM_URL = 'https://forklift-project-website.vercel.app'
+﻿const STREAM_URL = 'http://localhost:8888'
 
 function App() {
   return (
