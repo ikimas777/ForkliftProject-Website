@@ -1,8 +1,8 @@
-const STREAM_URL = 'http://localhost'
+﻿const STREAM_URL = 'https://forklift-project-website.vercel.app'
 
 function App() {
   return (
-    <div className="page contact-page">
+    <div className="page stream-page">
       <div className="stream-wrap">
         <iframe
           className="stream-iframe"
@@ -16,3 +16,4 @@ function App() {
 }
 
 export default App
+

@@ -1,19 +1,23 @@
-/* ===== CONTACT PAGE ===== */
+ï»¿/* ===== CONTACT PAGE ===== */
 .contact-page {
   width: 100%;
   min-height: 100vh;
   margin-top: -40px; /* TUTAJ */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 24px;
 }
 
 .contact-container {
   max-width: 1200px;
-  margin: 0 auto; /* Zmieñ z 40px na 0 */
+  margin: 0 auto; /* ZmieÅ„ z 40px na 0 */
   padding: 0 24px;
 }
 
 /* Lub bardziej precyzyjnie: */
 .contact-hero {
-  margin-bottom: -60px; /* Przesuwa zawartoœæ do góry */
+  margin-bottom: -60px; /* Przesuwa zawartoÅ›Ä‡ do gÃ³ry */
 }
 
 .contact-grid {
@@ -29,7 +33,7 @@ html, body, #root, .page { height: 100%; width: 100%; }
 body { font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; color: #fff; }
 
 .logo-img {
-  width: 80px;   /* tu zmniejszasz rozmiar – np. 80px, 60px, 40px */
+  width: 80px;   /* tu zmniejszasz rozmiar â€“ np. 80px, 60px, 40px */
   height: auto;  /* zachowuje proporcje */
   background: none;
   fill: none;
@@ -66,21 +70,21 @@ body {
 
   /* gradient */
   background: linear-gradient(125deg, var(--gradient-colors));
-  background-size: 400% 400%;  /* ‹ wa¿ne! */
-  animation: gradientFlow 10s ease infinite; /* ‹ jedna spójna animacja */
+  background-size: 400% 400%;  /* â€¹ waÅ¼ne! */
+  animation: gradientFlow 10s ease infinite; /* â€¹ jedna spÃ³jna animacja */
 
   position: relative;
   overflow: hidden;
 }
 
-/* p³ynna animacja przesuwania gradientu */
+/* pÅ‚ynna animacja przesuwania gradientu */
 @keyframes gradientFlow {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-/* dodatkowy efekt œwiat³a */
+/* dodatkowy efekt Å›wiatÅ‚a */
 body::before {
   content: "";
   position: fixed;
@@ -96,17 +100,17 @@ body::before {
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
-/* osobny kontener dla flag – lekko odsuniêty */
-/* Flagi – teraz z LEWEJ strony od przycisku */
+/* osobny kontener dla flag â€“ lekko odsuniÄ™ty */
+/* Flagi â€“ teraz z LEWEJ strony od przycisku */
 .lang-flags {
   display: flex;
   align-items: center;
-  gap: 8px;           /* odstêp miêdzy flagami */
-  padding-right: 10px; /* trochê miejsca przed lini¹ */
+  gap: 8px;           /* odstÄ™p miÄ™dzy flagami */
+  padding-right: 10px; /* trochÄ™ miejsca przed liniÄ… */
   border-right: 1px solid rgba(255,255,255,0.3); /* separator */
 }
 
-/* Styl flag – zostaje bez zmian */
+/* Styl flag â€“ zostaje bez zmian */
 .flag-icon {
   width: 24px;
   height: 20px;
@@ -135,7 +139,7 @@ body::before {
 
 /* ===== NAVBAR ===== */
 .navbar {
-  position: relative; /* ju¿ masz – wa¿ne, ¿eby by³o */
+  position: relative; /* juÅ¼ masz â€“ waÅ¼ne, Å¼eby byÅ‚o */
 }
 .nav-inner {
   display: flex;
@@ -168,7 +172,7 @@ body::before {
 .nav-left {
   display: flex;
   align-items: center;
-  gap: 12px; /* odstêp miêdzy logo a napisem XYZ */
+  gap: 12px; /* odstÄ™p miÄ™dzy logo a napisem XYZ */
   padding-left: 0;
   font-size: 2rem;
   font-style: normal;
@@ -177,9 +181,9 @@ body::before {
 .nav-right {
   display: flex;
   align-items: center;
-  gap: 8px;       /* odstêp miêdzy flagami a przyciskiem */
+  gap: 8px;       /* odstÄ™p miÄ™dzy flagami a przyciskiem */
   justify-content: flex-end;
-  flex-direction: row-reverse; /* odwraca kolejnoœæ wizualn¹ */
+  flex-direction: row-reverse; /* odwraca kolejnoÅ›Ä‡ wizualnÄ… */
 }
 
 .btn {
@@ -226,7 +230,7 @@ body::before {
 .mock-section {
   margin-top: 70px;
   padding: 60px 0;
-  background: transparent; /* usuñ t³o, aby widaæ per³owy efekt */
+  background: transparent; /* usuÅ„ tÅ‚o, aby widaÄ‡ perÅ‚owy efekt */
 }
 .mock-inner {
   display: flex;
@@ -251,8 +255,14 @@ body::before {
 
 /* ===== PIXEL STREAM ===== */
 .stream-wrap {
-  width: 100%;
-  height: 100vh;
+  width: min(1200px, 92vw);
+  aspect-ratio: 16 / 9;
+  max-height: 70vh;
+  max-width: calc(70vh * 16 / 9);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.45);
+  background: #000;
 }
 .stream-iframe {
   width: 100%;
@@ -260,4 +270,15 @@ body::before {
   border: 0;
   display: block;
   background: #000;
+}
+
+
+
+.stream-page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 24px;
 }
