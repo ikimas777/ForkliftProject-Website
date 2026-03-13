@@ -1,4 +1,4 @@
-const STREAM_URL = 'http://91.98.239.43'
+const STREAM_URL = 'http://91.98.239.43:8080'
 
 function App() {
   return (
