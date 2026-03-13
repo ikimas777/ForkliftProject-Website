@@ -1,4 +1,4 @@
-const STREAM_URL = 'https://stream.ikimas.site'
+const STREAM_URL = 'http://91.98.239.43'
 
 function App() {
   return (
